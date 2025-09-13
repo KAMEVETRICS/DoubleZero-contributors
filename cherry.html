@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cherry Servers - DoubleZero</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff;
+      color: #000;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* Navbar */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid #000;
+      background: #fff;
+      position: relative;
+      z-index: 100;
+    }
+    .logo {
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+      transition: opacity 0.3s;
+    }
+    .nav-links a:hover {
+      opacity: 0.6;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+    }
+
+    /* Mobile menu */
+    .mobile-menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 80%;
+      height: 100vh;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      transition: right 0.4s ease;
+      z-index: 200;
+    }
+    .mobile-menu.open {
+      right: 0;
+    }
+    .mobile-menu a {
+      text-decoration: none;
+      color: #000;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    .close-btn {
+      position: absolute;
+      top: 1rem;
+      right: 1.5rem;
+      font-size: 2rem;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      .hamburger {
+        display: block;
+      }
+    }
+
+    /* Main content */
+    main {
+      flex: 1;
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+      line-height: 1.7;
+    }
+    main h1 {
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    section {
+      margin-bottom: 2.5rem;
+    }
+    section h2 {
+      margin-bottom: 1rem;
+      border-bottom: 1px solid #000;
+      display: inline-block;
+      padding-bottom: 0.3rem;
+    }
+    ul {
+      list-style: disc;
+      padding-left: 1.5rem;
+    }
+     /* Footer */
+    footer {
+      text-align: center;
+      padding: 1rem 0;
+      font-size: 0.9rem;
+      border-top: 1px solid #ccc;
+    }
+    footer .icons {
+      margin-top: 0.5rem;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+    footer .icons img {
+      width: 24px;
+      height: 24px;
+      filter: grayscale(100%);
+      transition: filter var(--transition);
+    }
+    footer .icons img:hover {
+      filter: grayscale(0);
+    }
+
+    @keyframes fadeIn { to { opacity: 1; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">DoubleZero</div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="contributors.html">Contributors</a>
+      <a href="contactus.html">Contact</a>
+    </nav>
+    <div class="hamburger" id="hamburger">&#9776;</div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="close-btn" id="closeBtn">&times;</div>
+    <a href="index.html">Home</a>
+    <a href="contributors.html">Contributors</a>
+    <a href="contactus.html">Contact</a>
+  </div>
+
+  <main>
+    <h1>Cherry Servers</h1>
+
+    <section>
+      <h2>Introduction</h2>
+      <p>
+        Cherry Servers is a Lithuania-based cloud infrastructure provider specializing in dedicated bare metal servers, VPS, and cloud solutions optimized for high-performance workloads, including Web3, blockchain, and crypto applications. Founded in 2016, the company offers enterprise-grade hardware with full customization, global data centers (EU, US, Asia), and crypto-friendly features such as Bitcoin and 15+ cryptocurrency payments via CoinGate.
+      </p>
+      <p>
+        It positions itself as a Web3 enabler, providing secure, low-latency servers for node hosting, validators, dApps, mining, and trading—without KYC for crypto payments or account restrictions for blockchain projects. As of September 2025, Cherry Servers emphasizes decentralization, supporting protocols like Solana, Ethereum, and Sui with pre-built configs for staking and RPC nodes. 
+      </p>
+      <p>
+        The company serves developers, enterprises, and crypto enthusiasts, boasting 99.97% SLA uptime, 24/7 support with 15-second response times, and DDoS protection up to 2Tbps.
+      </p>
+    </section>
+
+    <section>
+      <h2>Recent Developments</h2>
+      <ul>
+        <li>Rolled out AMD EPYC 5th Gen for blockchain/AI workloads; published blog on RPC nodes as the “Web3 backbone.”</li>
+        <li>Established PNI with Teraswitch (0.1ms Amsterdam latency); added IPv6 for scalable Web3 addressing.</li>
+        <li>Joined DoubleZero (EU mesh for resilient blockchain); introduced AMD Ryzen 5th Gen for latency-sensitive dApps.</li>
+        <li>Sponsored Affiliate World (Budapest, Sep 4–5); released case study with StableLab (35% cost savings, 100% uptime); promoted Solana Gen5 servers.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>How Cherry Servers Contributes to DoubleZero</h2>
+      <p>
+        Cherry Servers’ EU-based data centers in Amsterdam, Frankfurt, Lithuania, and Stockholm will soon connect to the DoubleZero network, enabling faster, fairer, and more resilient blockchain communication leading into mainnet-beta.
+      </p>
+      <p>
+        Cherry recognizes that mission-critical infrastructure demands a network purpose-built for distributed systems.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>made with ❤️ by K</p>
+    <div class="socials">
+      <a href="https://x.com/kongclaves" id="x-link">𝕏</a>
+      <a href="https://discord.com/users/815369061873221673" id="mail-link">💬</a>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById("hamburger");
+    const closeBtn = document.getElementById("closeBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    hamburger.addEventListener("click", () => {
+      mobileMenu.classList.add("open");
+    });
+
+    closeBtn.addEventListener("click", () => {
+      mobileMenu.classList.remove("open");
+    });
+  </script>
+</body>
+</html>

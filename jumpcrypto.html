@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jump Crypto - DoubleZero</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff;
+      color: #000;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    /* Navbar */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid #000;
+      background: #fff;
+      position: relative;
+      z-index: 100;
+    }
+    .logo {
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+      transition: opacity 0.3s;
+    }
+    .nav-links a:hover {
+      opacity: 0.6;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 1.8rem;
+      cursor: pointer;
+    }
+
+    /* Mobile menu */
+    .mobile-menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 80%;
+      height: 100vh;
+      background: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 2rem;
+      transition: right 0.4s ease;
+      z-index: 200;
+    }
+    .mobile-menu.open {
+      right: 0;
+    }
+    .mobile-menu a {
+      text-decoration: none;
+      color: #000;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    .close-btn {
+      position: absolute;
+      top: 1rem;
+      right: 1.5rem;
+      font-size: 2rem;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+      .hamburger {
+        display: block;
+      }
+    }
+
+    /* Main content */
+    main {
+      flex: 1;
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+      line-height: 1.7;
+    }
+    main h1 {
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+    section {
+      margin-bottom: 2.5rem;
+    }
+    section h2 {
+      margin-bottom: 1rem;
+      border-bottom: 1px solid #000;
+      display: inline-block;
+      padding-bottom: 0.3rem;
+    }
+    ul {
+      list-style: disc;
+      padding-left: 1.5rem;
+    }
+     /* Footer */
+    footer {
+      text-align: center;
+      padding: 1rem 0;
+      font-size: 0.9rem;
+      border-top: 1px solid #ccc;
+    }
+    footer .icons {
+      margin-top: 0.5rem;
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+    }
+    footer .icons img {
+      width: 24px;
+      height: 24px;
+      filter: grayscale(100%);
+      transition: filter var(--transition);
+    }
+    footer .icons img:hover {
+      filter: grayscale(0);
+    }
+
+    @keyframes fadeIn { to { opacity: 1; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="logo">DoubleZero</div>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="contributors.html">Contributors</a>
+      <a href="contactus.html">Contact</a>
+    </nav>
+    <div class="hamburger" id="hamburger">&#9776;</div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="close-btn" id="closeBtn">&times;</div>
+    <a href="index.html">Home</a>
+    <a href="contributors.html">Contributors</a>
+    <a href="contactus.html">Contact</a>
+  </div>
+
+  <main>
+    <h1>Jump Crypto</h1>
+
+    <section>
+      <h2>Introduction</h2>
+      <p>
+        Jump Crypto is the cryptocurrency division of Jump Trading Group, a Chicago-based proprietary trading firm founded in 1999. Specializing in algorithmic and high-frequency trading (HFT) across traditional and digital assets, Jump Trading employs over 1,600 people globally and trades in futures, options, equities, and cryptocurrencies.
+      </p>
+      <p>
+        Jump Crypto, established as a formal entity in September 2021, focuses on Web3 infrastructure development, investments, trading, and market-making to support blockchain ecosystems. It positions itself as a builder of decentralized networks, emphasizing open-source projects and community-driven innovation.
+      </p>
+    </section>
+
+    <section>
+      <h2>Infrastructure Development</h2>
+      <ul>
+        <li>Firedancer: High-performance Solana validator client</li>
+        <li>DoubleZero: Private networking for blockchains; raised $28M at $400M valuation</li>
+        <li>Wormhole: Cross-chain bridge; Jump backed $320M hack recovery</li>
+        <li>Pyth Network: Real-time DeFi oracle</li>
+        <li>Shelby and Others: Contributions to Cosmos and Zilliqa ecosystems</li>
+        <li>In June 2025, Jump's security team disclosed a CosmWasm vulnerability, preventing chain halts</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>How Jump Contributes to DoubleZero</h2>
+      <p>
+        Jump has spent over a decade building ultra-low-latency networks for high-frequency trading, where every microsecond matters.
+      </p>
+      <p>
+        As DoubleZero's first network and engineering contributor, DoubleZero is now applying that same precision to crypto, designing a transport layer purpose-built for modern blockchains and internet capital markets. Jump’s Firedancer may also integrate DoubleZero which in extension opens DoubleZero for more access by validators.
+      </p>
+    </section>
+  </main>
+   <footer>
+    <p>made with ❤️ by K</p>
+    <div class="socials">
+      <a href="https://x.com/kongclaves" id="x-link">𝕏</a>
+      <a href="https://discord.com/users/815369061873221673" id="mail-link">💬</a>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById("hamburger");
+    const closeBtn = document.getElementById("closeBtn");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    hamburger.addEventListener("click", () => {
+      mobileMenu.classList.add("open");
+    });
+
+    closeBtn.addEventListener("click", () => {
+      mobileMenu.classList.remove("open");
+    });
+  </script>
+</body>
+</html>
+
+
+
+
